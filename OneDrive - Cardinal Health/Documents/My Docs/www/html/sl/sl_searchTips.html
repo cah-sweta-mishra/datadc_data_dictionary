@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>Tips for Searching...</TITLE>
+<META name="description" content="About Search Tips Pharma Data Dictionary">
+<META name="keywords" content="Open Source Business Data Dictionary">
+<META NAME="ROBOTS" CONTENT="NOCACHE,NOARCHIVE">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+
+<P>
+<H3>Tips for Searching...</H3>
+Context is key! Especially when looking for field mappings in the future state, please be careful to think about <strong>where</strong> in the process the data lives.
+<P>
+Much of Cardinal's data has the same business name but a different functionality depending on the business unit. Try to make your searches as specific as possible -avoid general terms like <q>sales</q> or <q>invoices</q> unless you can filter by one of the additional criteria below.
+<P>
+<p>
+All searches in the dictionary with a red diamond (<span style="color:#ff0000">&#x2662;</span>) are wild card searches.
+</p>
+<H3>Search Criteria by Field</H3>
+<strong><u>By WRICEF:</u></strong> &nbsp; If you are looking for a set of attributes related to a WRICEF object, you can input the <strong>WRICEF ID</strong> in this field. This is a wild card search available, but you should try to be as exact as possible.<P>
+<ul>
+<li>	If you are looking for a BSA, you can type <q>BSA</q> and the name of the report owner in this field to find the data attributes associated with that report.</li> 
+	<img src="image/screenshot1.png">
+
+</ul>
+<BR>
+<b><u>The following criteria are all tips for searching in the Name Field. </u></b>
+<BR>
+ <img src="image/screenshot2.png">
+
+ <p>
+ <strong><u>By System:</u></strong> &nbsp; In the <q>Name</q> field, input the <b>system</b> you are interested in. The wild card query will return all results with that system in the name.
+ 
+<ul>
+<li>	
+	Abbreviations: Distrack = DTK, Teradata = TDW
+</li> 
+</ul>
+</P>
+
+<p>
+ <strong><u>By Table:</u></strong> &nbsp; In the <q>Name</q> field, input the <b>table</b> you are interested in. The wild card query will return all results with that table in the name. No table names have been abbreviated.
+</P>
+
+<p>
+ <strong><u>By Field:</u></strong> &nbsp; In the <q>Name</q> field, input the <b>field</b> you are interested in. The wild card query will return all results with that field in the name. No field names have been abbreviated.
+</P>
+
+<p>
+ <strong><u>By Tower:</u></strong> &nbsp; In the <q>Tower</q> drop-down, select the <b>PMOD process tower</b> by which you wish to filter your results. 
+ <br> <img src="image/screenshot3.png">
+
+<ul>
+<li> Please bear in mind that tower ownership is determined by design. E.g., PO # is owned by PTP when it appears on the PO, but might also appear on an RTR report with a different table name.</li> 
+<li> Please note that all BSAs will be uploaded under the BIA tower.</li>
+</ul>
+</p>
+
+<p>
+ <strong><u>By Subject Area:</u></strong> &nbsp; If you are looking for terms related to a set of business processes, you can try to search by <b>Subject Area</b>. There are currently 21 available values, with more set to be defined in PMOD 2. Use this if you feel confident in the usage of the needed field.
+ <br> <img src="image/screenshot4.png">
+</P>
+
+<p>
+ <strong><u>By Type:</u></strong> &nbsp; This a useful filter to narrow down search results. 
+ <br> <img src="image/screenshot5.png">
+</P>
+
+<p>
+ Entries in the dictionary are currently categorized into three <b>types</b>:
+
+<ol>
+<li> Term: Business term or acronym</li> 
+<li> Future State Field: a technical field located in a future state system, such as SAP-ECC.</li>
+<li> Legacy Field: a technical field located in a current state system, such as CCDB.</li>
+</ol>
+</p>
+
+<p>If you still cannot find what you are searching for, please send an email to the Data Leads’ Team Inbox: <u style="color:blue"> <a href='mailto:GMB-PMOD2-DataLeads@cardinalhealth.com?subject=New Incident&body=Please tell us how we can help !' ><u>GMB-PMOD2-DataLeads@cardinalhealth.com</u></a></u></p>
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>SuperLuminate Help</TITLE>
+
+
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+
+<P>
+<H3>SuperLuminate (Basic Help)</H3>
+This basic help window should provide a new user with a few examples to help
+them navigate through the SuperLuminate data dictionary application for
+the first time. For more advanced help please refer to the user guide or
+connect to the SuperLuminate web site at www.superluminete.com.
+<p><H4><a href='mailto:GMB-PMOD2-DataLeads@cardinalhealth.com?subject=New Incident' > GMB-PMOD2-DataLeads </a></H4></p>
+<P>
+NOTE: You can determine the SuperLuminate page you are viewing by checking the message bar on that page. If the message bar reads "[Login] Please Login", you are on the [Login] page. In this document a page will be indicated with brackets []; Wavy brackets {} indicate something that can be pressed (selected) like, buttons, dropdowns, and links.
+<P>
+<B><U>Quick-Start Examples</U></B>
+	<OL>
+
+		<LI><B>Basic Look and Feel</B>
+		<UL>
+			<LI>SuperLuminate [Login] page => Press the {Read Only Access} button. This will log you into SuperLuminate as a read only user. You will be able to select and see all &quotpublic&quot records and relationships, but you will not be able to change any records or system settings.
+			<LI>Main Menu => Press the {Search} button. This will drop you into the [Search] page where you can select records. The [Search] page layout consists of all of the fields that makeup a &quotbasic&quot record in the SuperLuminate data dictionary. This does not include extended properties or relationships.
+			<LI>At anytime, if you should get lost => Press the {Main Menu} link found on the top right hand side of all pages. From the [Main menu] page you can start again or logoff.
+		</UL>
+<P>
+		<LI><B>Selection by Taxonomy</B>
+		<UL>
+			<LI>On the top of the [Search] page you will see a set of six properties: Category, Subject, Class, Type, Name, Version. These properties form the identifier (key) for all records contained in SuperLuminate. The properties Category, Subject, Class, and Type, define the taxonomy (ordered relationships) of the record. What a taxonomy is and why it is important, please refer to the user guide. Any of the four taxonomy dropdown properties (Category, Subject, Class, and Type) can be selected and searched.
+			<UL>
+				<LI>Select the {Subject} property dropdown list button and pick {Business}.
+				<LI>Press the {Search Now} button. This will display all records in the SuperLuminate data dictionary that have been assigned to the Subject "Business".
+				<LI>To select a specific record, press a button under the "SELECT" label to select and display the corresponding record.
+				<LI>Pressing the {Search Again} button will return you to the [Search] page.
+			</UL>
+		</UL>
+<P>
+		<LI><B>Selection by Entry</B>
+		<UL>
+			<LI>On the [Search] page below the taxonomy properties (Category, Subject, Class, and Type) you will see the fields labeled (Name, Alias, and Description). Note that the label names are followed by a red diamond (<FONT color=red>&#9830</FONT>). This indicates that when the corresponding field is searched for the word or phrase you entered, the word or phase will be found no matter where in the field it is located and is independent of character case, e.g. uppercase or lowercase.
+			<UL>
+				<LI>Type "customer" into the field labeled Description.
+				<LI>Press the {Search Now} button. This will display all records in the SuperLuminate data dictionary that have the word "customer" in the Description field.
+				<LI>To select a specific record, press a button under the "SELECT" label to select and display the corresponding record.
+				<LI>Pressing the {Search Again} button will return you to the [Search] page.
+			</UL>
+		</UL>
+<P>
+		<LI><B>Compound Selection</B>
+		<UL>
+			<LI>On the [Search] page, for this example, we will select a taxonomy value and enter a search word. Adding more entries to the selection criteria will reduce the set of records returned. You can specify as many criteria as you wish. (Note: If no records meet the criteria you have set, no records will be returned.)
+			<UL>
+				<LI>Select the {Class} property dropdown list button and pick {Table}.
+				<LI>Type "user" into the field labeled Description.
+				<LI>Press the {Search Now} button. This will display all records in the SuperLuminate data dictionary of Class "Table" that have the word "user" in the Description field.
+				<LI>To select a specific record, press a button under the "SELECT" label to select and display the corresponding record.
+				<LI>Pressing the {Search Again} button will return you to the [Search] page.
+			</UL>
+		</UL>
+<P>
+		<LI><B>Following the Parent Child Relationship Links</B>
+		<UL>
+			<LI>For this example, we will first retrieve the records selected in the last example then we will select a specific record and then see how that record is linked hierarchically to other records of different types. We will be able to travel from record to record up and down the tree of relationships that was defined in SuperLuminate by the administrator. The relationship tree, technically known as a schema (a.k.a. Information Model) is a key feature of SuperLuminate and is discussed in far more detail in the user guide.
+			<UL>
+				<LI>Select the {Class} property dropdown list button and pick {Table}.
+				<LI>Type "user" into the field labeled Description.
+				<LI>Press the {Search Now} button.
+				<LI>Press the button under the "SELECT" label corresponding to the record with the Name "SL_Prod.SL_Object".
+			</UL>
+			<P>
+On the [Selection] page you should now be viewing the record named "SL_Prod.SL_Object". Using the elevator viewing bar on the side of your browser you can view the contents of the entire record. You can see the record is broken into sections, Base Properties, Extended Properties, Parent Objects, and Child Objects. Extended Properties are properties that have been defined by the administrator as extensions to SuperLuminate. Parent Objects are records that fall higher on the hierarchical tree than the current record and Child Objects are records that fall lower on the tree.
+			<P>
+Schema (a.k.a. Information Model): In this example we are currently looking at record that has a Class value of "Table". The example schema enforces relationships between Classes as follows:
+			<OL>
+				<LI>An Application can be a parent to many Databases
+				<LI>A Database can be a parent to many Tables
+				<LI>A Table can be a parent to many Columns
+			</OL>
+			<P>
+Because we are currently viewing a "Table" record. The Parent Object will be of Class "Database" and the Child Objects will be of Class "Column". You can traverse this tree by selecting a Parent Object or a Child Object to view the corresponding record. When there you can do the same thing again moving from record to record through the relationship tree (schema).
+			<UL>
+				<LI>Select parent name "SL_Prod" to see the database record.
+				<LI>Select child name "SL_Prod.SL_Object" to return to the previous table record.
+				<LI>Select child name "SL_Prod.SL_Object.Desc_TX" to view one of the column record. Note: In the column record, is a set of Extended Properties that has been defined for this class of record by the administrator.
+			</UL>
+		</UL>
+	</OL>
+<P>
+<H3>Additional information</H3>
+For additional information please visit the SuperLuminate website at www.superluminate.com.
+<P>
+<EM>&copy; Copyright 2003-2011 SuperLuminate, All Rights Reserved</EM>
+</BODY>
+
+</HTML>
